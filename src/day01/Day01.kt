@@ -3,6 +3,10 @@ package day01
 import println
 import readInput
 
+const val inputFile = "day01/Day01"
+const val testInputPart1File = "day01/Day01_part1_test"
+const val testInputPart2File = "day01/Day01_part2_test"
+
 val wordNumbers = arrayOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
 fun main() {
@@ -40,13 +44,13 @@ fun main() {
         return intList.sum()
     }
 
-    val testInputPart1 = readInput("day01/Day01_part1_test")
+    val testInputPart1 = readInput(testInputPart1File)
     check(part1(testInputPart1) == 142)
 
-    val testInputPart2 = readInput("day01/Day01_part2_test")
+    val testInputPart2 = readInput(testInputPart2File)
     check(part2(testInputPart2) == 281)
 
-    val input = readInput("day01/Day01")
+    val input = readInput(inputFile)
     part1(input).println()
     part2(input).println()
 }
